@@ -520,25 +520,28 @@ body {
   line-height: 1.8em; }
 
 #header {
+  position: relative;
   width: 100%; }
   #header ul {
-    margin: 20px 0 0 -8px;
-    padding: 0; }
+    display: inline-block;
+    margin: 120px 0 0 92px;
+    padding: 0 0 12px 0; }
   #header li {
     font-size: 14px;
     display: inline;
     margin: 0;
     padding: 4px 12px;
-    border-right: 1px solid #ccc; }
+    border-right: 1px solid #e4e4e4; }
     #header li a {
-      padding: 4px 8px; }
+      padding: 8px 16px; }
   #header li.first {
+    margin-left: -4px;
     padding-left: 0; }
   #header li.last {
     border-right: none; }
 
 #footer {
-  color: #e2e2e2;
+  color: #e4e4e4;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -565,9 +568,9 @@ body {
     margin: 0 0 0 -18px;
     padding: 4px 18px 0 18px;
     display: inline-block;
-    border-radius: 4px 4px 0 0;
+    border-radius: 2px 2px 0 0;
     background: #3e3e3e;
-    color: #e2e2e2; }
+    color: #e4e4e4; }
   #footer ul {
     width: 240px;
     padding: 0;
@@ -585,21 +588,30 @@ a {
   color: #384247;
   text-decoration: none; }
   a:hover {
-    background: #e2e2e2; }
+    background: #e4e4e4; }
   a:active {
     background: #666;
     color: #ffffff; }
 
 #home {
-  margin-top: 60px;
-  background: #e2e2e2;
+  position: relative;
   width: 600px;
+  margin: 0px 0 0 -30px;
   padding: 10px 30px;
-  margin-left: -30px; }
+  background: #e4e4e4;
+  border-radius: 2px; }
 
 .company-info {
   width: 600px;
   font-style: italic; }
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  /* top: -92px; left: 0; */
+  left: -30px;
+  border: 12px solid #e4e4e4;
+  border-bottom: none; }
 
 .image {
   display: inline-block;

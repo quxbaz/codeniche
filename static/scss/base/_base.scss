@@ -43,7 +43,7 @@ $sub3_fs: $fs - 3px;
 
 $font_color: #384247;
 $bg_color: #ffffff;
-$reverse_font_color: #e2e2e2;
+$reverse_font_color: #e4e4e4;
 $reverse_bg_color: #222;
 /* $font_color: #ddd; */
 /* $bg_color: #121212; */
@@ -67,22 +67,22 @@ body {
 }
 
 #header {
+    position: relative;
     width: 100%;
     ul {
-        margin: 20px 0 0 -8px;
-        padding: 0;
+        display: inline-block;
+        margin: 120px 0 0 92px;
+        padding: 0 0 12px 0;
     }
     li {
         font-size: $sub1_fs;
         display: inline;
         margin: 0;
         padding: 4px 12px;
-        border-right: 1px solid #ccc;
-        a {
-            padding: 4px 8px;
-        }
+        border-right: 1px solid $reverse_font_color;
+        a {padding: 8px 16px;}
     }
-    li.first {padding-left: 0;}
+    li.first {margin-left: -4px; padding-left: 0;}
     li.last {border-right: none;}
 }
 
@@ -103,7 +103,7 @@ body {
         margin: 0 0 0 -18px;
         padding: 4px 18px 0 18px;
         display: inline-block;
-        border-radius: 4px 4px 0 0;
+        border-radius: 2px 2px 0 0;
         background: lighten($reverse_bg_color, 11%);
         color: $reverse_font_color;
     }
@@ -121,9 +121,7 @@ body {
     margin-left: 100px;
 }
 
-li {
-    list-style-type: none;
-}
+li {list-style-type: none;}
 
 a {
     color: $font_color;
@@ -133,16 +131,26 @@ a {
 }
 
 #home {
-    margin-top: 60px;
-    background: #e2e2e2;
+    position: relative;
     width: 600px;
+    margin: 00px 0 0 -30px;
     padding: 10px 30px;
-    margin-left: -30px;
+    background: $reverse_font_color;
+    border-radius: 2px;
 }
 
 .company-info {
     width: 600px;
     font-style: italic;
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    /* top: -92px; left: 0; */
+    left: -30px;
+    border: 12px solid $reverse_font_color;
+    border-bottom: none;
 }
 
 //--------------------------------------------------------------------
