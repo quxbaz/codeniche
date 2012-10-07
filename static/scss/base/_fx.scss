@@ -1,0 +1,48 @@
+//--------------------------------------------------------------------
+// FX
+//--------------------------------------------------------------------
+
+
+// Cross-browser compatible border-radius.
+@mixin border-radius($radii) {
+    // IE9 has support for the border-radius property, but IE8 and
+    // below don't.
+    -moz-border-radius: $radii;    // Firefox
+    -webkit-border-radius: $radii; // Safari, Chrome
+    border-radius: $radii;         // CSS3
+}
+
+@mixin opacity($opacity) {
+    // IE 8
+    $ie_opacity: $opacity * 100;  // For IE, opacity has a range from 0-100 instead of 0-1.0
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie_opacity)";
+    // IE 5-7
+    filter: alpha(opacity=$ie_opacity);
+    // Netscape
+    -moz-opacity: $opacity;
+    // Safari 1.x
+    -khtml-opacity: $opacity;
+    // Good browsers
+    opacity: $opacity;
+}
+
+// Cross-browser compatible top-down linear gradient. Gradients are a mess :(
+// [Source: http://css3please.com/]
+@mixin vertical-gradient($startcolor, $endcolor) {
+    background-color: $startcolor;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($startcolor), to($endcolor)); // Saf4+, Chrome
+    background-image: -webkit-linear-gradient(top, $startcolor, $endcolor); // Chrome 10+, Saf5.1+, iOS 5+
+    background-image:    -moz-linear-gradient(top, $startcolor, $endcolor); // FF3.6
+    background-image:     -ms-linear-gradient(top, $startcolor, $endcolor); // IE10
+    background-image:      -o-linear-gradient(top, $startcolor, $endcolor); // Opera 11.10+
+    background-image:         linear-gradient(to bottom, $startcolor, $endcolor); // CSS3
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', // endColorstr='#000000'); // IE 5-7
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000'); // IE8
+}
+
+// Cross-browser compatible box-shadow.
+@mixin box-shadow($values) {
+    -moz-box-shadow: $values;       // Firefox
+    -webkit-box-shadow: $values;    // Safari, Chrome
+    box-shadow: $values;            // CSS3
+}

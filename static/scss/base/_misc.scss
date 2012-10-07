@@ -1,0 +1,41 @@
+//--------------------------------------------------------------------
+// Misc. rules
+//--------------------------------------------------------------------
+
+
+.float-left {float: left;}
+.float-right {float: right;}
+.align-left {text-align: left;}
+.align-right {text-align: right;}
+.inline {position: inline;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.fixed {position: fixed;}
+.inline-block {display: inline-block;}
+.hide {display: none;}
+.clickable {cursor: pointer;}
+
+// This is sometimes preferable to the mixin version because it
+// doesn't generate extra code.
+.clearfix {
+    &:before, &:after {content: ""; display: table;}
+    &:after {clear: both;}
+    & {zoom: 1;} // For IE 6/7
+}
+
+// Column class
+.col {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.fixed-width-10  {width:  10px;}
+.fixed-width-20  {width:  20px;}
+.fixed-width-30  {width:  30px;}
+.fixed-width-40  {width:  40px;}
+.fixed-width-50  {width:  50px;}
+.fixed-width-60  {width:  60px;}
+.fixed-width-70  {width:  70px;}
+.fixed-width-80  {width:  80px;}
+.fixed-width-90  {width:  90px;}
+.fixed-width-100 {width: 100px;}

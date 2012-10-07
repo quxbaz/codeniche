@@ -1,0 +1,21 @@
+//--------------------------------------------------------------------
+// Mixins
+//--------------------------------------------------------------------
+
+
+$images_dir: "";
+$spritesheet_file: "";
+
+// Takes a section of a spritesheet.
+@mixin sprite($x, $y, $w: 30px, $h: 30px) {
+    background: url($images_dir + $spritesheet_file) ($x * -1) ($y * -1) no-repeat;
+    width: $w; height: $h;
+}
+
+// A fix for a browser bug where floated elements' dimensions are
+// ignored by the parent container.
+@mixin clearfix {
+    &:before, &:after {content: ""; display: table;}
+    &:after {clear: both;}
+    & {zoom: 1;}  // For IE 6/7
+}

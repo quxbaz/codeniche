@@ -1,0 +1,12 @@
+//--------------------------------------------------------------------
+// Buttons, selects, textfields, etc
+//--------------------------------------------------------------------
+
+
+.btn {
+    @include border-radius(2px);
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+}
