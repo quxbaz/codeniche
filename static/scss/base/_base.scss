@@ -25,7 +25,7 @@ $page_width: 960px;
 
 $font_family: georgia, times, serif;
 $fs: 15px;
-$h1_fs: $fs * 10px;
+$h1_fs: $fs + 10px;
 $h2_fs: $fs + 3px;
 $h3_fs: $fs;
 $h4_fs: $fs;
@@ -83,7 +83,6 @@ body {
         padding: 0 0 12px 0;
     }
     li {
-        font-size: $sub1_fs;
         display: inline;
         margin: 0;
         padding: 4px 12px;
@@ -95,14 +94,15 @@ body {
 }
 
 #footer {
-    color: $reverse_font_color;
     position: absolute;
     bottom: 0; left: 0;
-    width: 100%; height: 140px;
-    /* background: lighten($reverse_bg_color, 11%); */
+    width: 100%; height: 120px;
+    color: $reverse_font_color;
     @include vertical-gradient(lighten($reverse_bg_color, 11%), $reverse_bg_color);
-    border-bottom: 24px solid #111113;
-    .inner {padding: 8px 0 0 $left_offset + 60px;}
+    /* border-bottom: 24px solid #111113; */
+    /* .inner {padding: 8px 0 0 $left_offset + 60px;} */
+    height: 110px;
+    .inner {padding: 8px 0 0 60px;}
     h2 {
         position: absolute;
         top: -28px;
@@ -131,14 +131,11 @@ body {
     position: absolute;
     padding-left: 60px;
     top: 0;
-    height: 100%;
-    background: #ffffff;
-    z-index: -1;
-    /* position: relative; */
-    width: $page_width;
     margin-left: $left_offset;
-    /* margin-left: 70px; */
-    /* padding-left: 30px; */
+    width: $page_width; height: 100%;
+    z-index: -1;
+    background: #ffffff;
+    h1 {font-size: $h1_fs + 16px;}
 }
 
 li {list-style-type: none;}
@@ -152,10 +149,15 @@ a {
 
 #home {
     position: relative;
-    width: 600px;
+    width: 840px;
     padding: 10px 30px;
     background: $reverse_font_color;
     border-radius: 0 4px 4px 4px;
+}
+
+.company-info {
+    font-size: $fs + 10px;
+    line-height: 1.6em;
 }
 
 .logo {
