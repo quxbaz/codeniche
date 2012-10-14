@@ -513,11 +513,15 @@ body {
   positon: relative;
   width: 100%;
   min-width: 960px;
-  font-family: georgia, times, serif;
+  font-family: helvetical, arial, sans-serif;
   font-size: 15px;
   color: #384247;
   line-height: 1.8em;
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  /* background: #2a2a2a; */
+  /* background: url("../imgs/bg/lake_compressed.jpg") top left no-repeat; */
+  /* background: url("http://farm9.staticflickr.com/8151/7192320784_9880269589.jpg") top left repeat; */
+  background: url("../imgs/textures/tiny_grid.png") top left repeat; }
 
 #header {
   position: relative;
@@ -556,9 +560,9 @@ body {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
   /* border-bottom: 24px solid #111113; */
   /* .inner {padding: 8px 0 0 $left_offset + 60px;} */
-  height: 110px; }
+  height: 120px; }
   #footer .inner {
-    padding: 8px 0 0 60px; }
+    padding: 16px 0 0 60px; }
   #footer h2 {
     position: absolute;
     top: -28px;
@@ -580,14 +584,19 @@ body {
     display: none; }
 
 #main {
-  position: absolute;
-  padding-left: 60px;
+  /* position: absolute; */
+  position: relative;
   top: 0;
-  margin-left: 100px;
   width: 960px;
   height: 100%;
-  z-index: -1;
-  background: #ffffff; }
+  padding-left: 60px;
+  /* margin-left: $left_offset; */
+  margin: 0 auto;
+  min-height: 800px;
+  background: #ffffff;
+  -moz-box-shadow: 0 0 28px 0 #ececec;
+  -webkit-box-shadow: 0 0 28px 0 #ececec;
+  box-shadow: 0 0 28px 0 #ececec; }
   #main h1 {
     font-size: 41px; }
 
@@ -634,23 +643,31 @@ a {
   /* box-shadow: 0 4px 8px #ccc; */ }
 
 #social-links {
-  position: fixed;
-  top: 10%;
-  right: 0; }
+  /* position: fixed; */
+  /* top: 10%; right: 0; */
+  /* font-weight: bold; */
+  position: absolute;
+  top: 70px;
+  right: -130px; }
 
 .social-link {
+  position: relative;
   margin: 4px 0;
   padding: 4px 10px;
   color: #4a575e;
   background: #e4e4e4;
-  border-radius: 2px 0 0 2px;
+  /* border-radius: 2px 0 0 2px; */
+  border-radius: 0 2px 2px 0;
   cursor: pointer;
-  width: 120px;
+  width: 110px;
   float: right;
   clear: right;
   text-align: right; }
+  .social-link:first-child {
+    margin-top: 0; }
   .social-link:hover {
-    width: 150px;
+    width: 140px;
+    left: 30px;
     background: #cbcbcb; }
   .social-link:active {
     background: #ff6b44;

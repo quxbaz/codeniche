@@ -23,7 +23,7 @@ $page_width: 960px;
 //--------------------------------------------------------------------
 
 
-$font_family: georgia, times, serif;
+$font_family: helvetical, arial, sans-serif;
 $fs: 15px;
 $h1_fs: $fs + 10px;
 $h2_fs: $fs + 3px;
@@ -55,7 +55,7 @@ $niche_color: #ff6b44;
 //--------------------------------------------------------------------
 
 
-$left_offset: 100px;
+$left_offset: 40px;
 
 
 //--------------------------------------------------------------------
@@ -72,6 +72,10 @@ body {
     color: $font_color;
     line-height: 1.8em;
     background: #f8f8f8;
+    /* background: #2a2a2a; */
+    /* background: url("../imgs/bg/lake_compressed.jpg") top left no-repeat; */
+    /* background: url("http://farm9.staticflickr.com/8151/7192320784_9880269589.jpg") top left repeat; */
+    background: url("../imgs/textures/tiny_grid.png") top left repeat;
 }
 
 #header {
@@ -101,8 +105,8 @@ body {
     @include vertical-gradient(lighten($reverse_bg_color, 11%), $reverse_bg_color);
     /* border-bottom: 24px solid #111113; */
     /* .inner {padding: 8px 0 0 $left_offset + 60px;} */
-    height: 110px;
-    .inner {padding: 8px 0 0 60px;}
+    height: 120px;
+    .inner {padding: 16px 0 0 60px;}
     h2 {
         position: absolute;
         top: -28px;
@@ -128,13 +132,17 @@ body {
 }
 
 #main {
-    position: absolute;
-    padding-left: 60px;
+    // Exists so that the container fills the entire height of the page.
+    /* position: absolute; */
+    position: relative;
+    //
     top: 0;
-    margin-left: $left_offset;
     width: $page_width; height: 100%;
-    z-index: -1;
+    padding-left: 60px;
+    /* margin-left: $left_offset; */
+    margin: 0 auto; min-height: 800px;
     background: #ffffff;
+    @include box-shadow(0 0 28px 0 #ececec);
     h1 {font-size: $h1_fs + 16px;}
 }
 
@@ -181,23 +189,30 @@ a {
 }
 
 #social-links {
-    position: fixed;
-    top: 10%; right: 0;
+    /* position: fixed; */
+    /* top: 10%; right: 0; */
+    /* font-weight: bold; */
+    position: absolute;
+    top: 70px; right: -130px;
 }
 
 .social-link {
+    position: relative;
     margin: 4px 0;
     padding: 4px 10px;
     color: lighten($font_color, 8%);
     background: $reverse_font_color;
-    border-radius: 2px 0 0 2px;
+    /* border-radius: 2px 0 0 2px; */
+    border-radius: 0 2px 2px 0;
     cursor: pointer;
-    width: 120px;
+    width: 110px;
     float: right;
     clear: right;
     text-align: right;
+    &:first-child {margin-top: 0;}
     &:hover {
-        width: 150px;
+        width: 140px;
+        left: 30px;
         background: darken($reverse_font_color, 10%);
     }
     &:active {
