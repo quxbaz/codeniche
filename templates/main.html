@@ -8,9 +8,12 @@
 </head>
 
 <body id="body">
+
   <!-- <img src="http://farm9.staticflickr.com/8151/7192320784_9880269589.jpg" style="height: 100%; position: absolute; width: 100%; opacity: 0.8;" /> -->
+  <div class="orange-bar"></div>
+
   <div id="main">
-    <div class="orange-bar"></div>
+
     <div id="header">
       <a href="home"><img class="logo" src="static/imgs/logo/logo_round_80x80.png" /></a>
       <ul>
@@ -19,28 +22,29 @@
         <li><a href="about">About</a></li>
         <li class="last"><a href="contact">Contact</a></li>
       </ul>
-    </div>
+    </div> <!-- #header -->
+
     {% include subpage %}
-    <div id="footer">
-      <div class="inner">
-        <!-- <h2>Codeniche</h2> -->
-        <div></div>
-        <ul>
-          <li><i class="icon-envelope-alt"></i> mysite@mygreatsite.com</li>
-          <li><i class="icon-phone"></i> (123) 456-7890</li>
-        </ul>
-        <ul>
-          <li><i class="icon-map-marker"></i> 555 Fake St<br/>Brooklyn, NY 12345</li>
-        </ul>
-        <div id="social-links">
-          <div class="social-link">LinkedIn<i class="icon-linkedin"></i></div>
-          <div class="social-link">Facebook<i class="icon-facebook"></i></div>
-          <div class="social-link">Twitter<i class="icon-twitter"></i></div>
-          <div class="social-link">Google+<i class="icon-google-plus"></i></div>
-        </div>
-      </div>
-    </div> <!-- #footer -->
+
   </div> <!-- #main -->
+
+  <div id="footer" class="clearfix">
+    <div class="inner">
+      <ul>
+        <li><i class="icon-envelope-alt"></i> mysite@mygreatsite.com</li>
+        <li><i class="icon-phone"></i> (123) 456-7890</li>
+      </ul>
+      <ul>
+        <li><i class="icon-map-marker"></i> 555 Fake St<br/>Brooklyn, NY 12345</li>
+      </ul>
+      <div id="social-links">
+        <div class="social-link">LinkedIn<i class="icon-linkedin"></i></div>
+        <div class="social-link">Facebook<i class="icon-facebook"></i></div>
+        <div class="social-link">Twitter<i class="icon-twitter"></i></div>
+        <div class="social-link">Google+<i class="icon-google-plus"></i></div>
+      </div>
+    </div>
+  </div> <!-- #footer -->
 
   <script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
 </body>
