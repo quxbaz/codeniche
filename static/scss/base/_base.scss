@@ -113,7 +113,7 @@ body {
     .inner {
         width: $page_width;
         margin: 0 auto;
-        /* padding: 16px 0 0 60px; */
+        padding-top: 16px;
     }
     h2 {
         position: absolute;
@@ -133,9 +133,10 @@ body {
         padding: 0 18px;
         margin: 0;
     }
-    i {
-        /* margin-left: -1em; */
-        /* display: none; */
+    i {display: none;}
+    #social-links {
+        float: right;
+        i {display: inline-block;}
     }
 }
 
@@ -198,10 +199,6 @@ a {
     /* height: 6px; */
     /* width: $page_width + 30px + 20px; */
     /* box-shadow: 0 4px 8px #ccc; */
-}
-
-#footer #social-links {
-    float: right;
 }
 
 #social-links {

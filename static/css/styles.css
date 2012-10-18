@@ -560,7 +560,7 @@ body {
   #footer .inner {
     width: 960px;
     margin: 0 auto;
-    /* padding: 16px 0 0 60px; */ }
+    padding-top: 16px; }
   #footer h2 {
     position: absolute;
     top: -28px;
@@ -578,8 +578,11 @@ body {
     padding: 0 18px;
     margin: 0; }
   #footer i {
-    /* margin-left: -1em; */
-    /* display: none; */ }
+    display: none; }
+  #footer #social-links {
+    float: right; }
+    #footer #social-links i {
+      display: inline-block; }
 
 #main {
   /* position: absolute; */
@@ -641,9 +644,6 @@ a {
   /* height: 6px; */
   /* width: $page_width + 30px + 20px; */
   /* box-shadow: 0 4px 8px #ccc; */ }
-
-#footer #social-links {
-  float: right; }
 
 #social-links {
   /* position: fixed; */
