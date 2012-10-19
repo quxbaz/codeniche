@@ -34,6 +34,7 @@ $h6_fs: $fs;
 $sub1_fs: $fs - 1px;
 $sub2_fs: $fs - 2px;
 $sub3_fs: $fs - 3px;
+$fs_block: $fs + 10px;
 
 
 //--------------------------------------------------------------------
@@ -66,6 +67,10 @@ body {
     positon: relative;
     width: 100%;
     min-width: $page_width;
+    // Ensures that the footer doesn't occlude content on shorter //
+    // screens.
+    padding-bottom: 200px;
+    //
     font-family: $font_family;
     font-size: $fs;
     color: $font_color;
@@ -90,16 +95,16 @@ body {
     background: $reverse_bg_color;
     color: $reverse_blended_font_color;
     font-size: $sub3_fs;
-    /* line-height: 1.8em; */
     ul, li {margin: 0; padding: 0;}
     ul {
         position: relative;
-        width: 140px;
+        /* width: 140px; */
+        width: $page_width / 3 - 40px;
         @extend .col;
     }
     ul + ul {
         border-left: 1px solid lighten($reverse_bg_color, 8%);
-        padding-left: 50px;
+        padding-left: 44px;
     }
     .inner {
         width: $page_width;
@@ -148,16 +153,37 @@ a {
     &:active {background: $codeniche_color; color: #ffffff;}
 }
 
-#home {
+#home {position: relative;}
+
+.block {
     position: relative;
-    padding: 10px 40px;
-    background: $reverse_font_color;
+    margin: {top: 12px; bottom: 12px;}
+    padding: 28px 40px;
+    background: lighten($reverse_font_color, 6%);
     border-radius: 4px;
+    font-size: $fs_block;
+    line-height: 1.6em;
 }
 
-.company-info {
-    font-size: $fs + 10px;
-    line-height: 1.6em;
+.big {
+    color: lighten($font_color, 4%);
+    font-size: 200%;
+    text-shadow: 0 -1px #ddd;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    .slash {color: $codeniche_color;}
+}
+
+.recent-work {
+    font-size: 0;
+    .block {
+        display: inline-block;
+        width: $page_width / 2 - 80px - 12px;
+        min-height: 200px;
+        font-size: $fs_block;
+        &.last {margin-left: 24px;}
+    }
 }
 
 .orange-bar {
