@@ -9,4 +9,5 @@
 - Move social tabs to side of main container.
 - Make site longer vertically
 - Remove absolute position on #main
-- Make footer longer
+- Make footer longer.
+- Hide email and phone number so you don't get spammed.

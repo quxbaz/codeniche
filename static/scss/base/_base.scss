@@ -15,7 +15,7 @@
 //--------------------------------------------------------------------
 
 
-$page_width: 960px;
+$page_width: 860px;
 
 
 //--------------------------------------------------------------------
@@ -44,10 +44,9 @@ $sub3_fs: $fs - 3px;
 $font_color: #384247;
 $bg_color: #ffffff;
 $reverse_font_color: #e4e4e4;
-$reverse_bg_color: #222;
-/* $font_color: #ddd; */
-/* $bg_color: #121212; */
-$niche_color: #ff6b44;
+$reverse_blended_font_color: #b2b2b2;
+$reverse_bg_color: #2a2a2a;
+$codeniche_color: #ff6b44;
 
 
 //--------------------------------------------------------------------
@@ -71,91 +70,73 @@ body {
     font-size: $fs;
     color: $font_color;
     line-height: 1.8em;
-    background: #f8f8f8;
-    background: #ffffff;
-    /* background: #2a2a2a; */
-    /* background: url("../imgs/bg/lake_compressed.jpg") top left no-repeat; */
-    /* background: url("../imgs/textures/tiny_grid.png") top left repeat; */
+    /* background: #f8f8f8; */
     /* background: url("../imgs/textures/subtle_grey.png") top left repeat; */
     /* background: url("../imgs/textures/subtle_grey_2x.png") top left repeat; */
-    /* background: url("../imgs/textures/gplaypattern.png") top left repeat; */
 }
 
 #header {
     position: relative;
     width: 100%;
-    ul {
-        display: inline-block;
-        margin: 120px 0 0 120px;
-        padding: 0 0 12px 0;
+    margin: 40px 0 30px 0;
+    a {
+        &:hover {background: none;}
+        &:active {background: none;}
     }
-    li {
-        display: inline;
-        margin: 0;
-        padding: 4px 12px;
-        border-right: 1px solid $reverse_font_color;
-        a {padding: 8px 16px;}
-    }
-    li.first {margin-left: -4px; padding-left: 0;}
-    li.last {border-right: none;}
 }
 
 #footer {
-    position: fixed;
-    bottom: 0; left: 0;
-    width: 100%; // height: 120px;
-    height: auto;
-    color: $reverse_font_color;
-    background: lighten($reverse_bg_color, 6%);
-    /* @include vertical-gradient(lighten($reverse_bg_color, 11%), $reverse_bg_color); */
-    /* border-bottom: 24px solid #111113; */
-    /* .inner {padding: 8px 0 0 $left_offset + 60px;} */
+    position: fixed; bottom: 0; width: 100%;
+    background: $reverse_bg_color;
+    color: $reverse_blended_font_color;
+    font-size: $sub3_fs;
+    /* line-height: 1.8em; */
+    ul, li {margin: 0; padding: 0;}
+    ul {
+        position: relative;
+        width: 140px;
+        @extend .col;
+    }
+    ul + ul {
+        border-left: 1px solid lighten($reverse_bg_color, 8%);
+        padding-left: 50px;
+    }
     .inner {
         width: $page_width;
         margin: 0 auto;
-        padding-top: 16px;
-    }
-    h2 {
-        position: absolute;
-        top: -28px;
-        width: auto; height: 24px;
-        font-size: $fs;
-        margin: 0;
-        padding: 4px 18px 0 18px;
-        display: inline-block;
-        border-radius: 2px 2px 0 0;
-        background: lighten($reverse_bg_color, 11%);
-        color: $reverse_font_color;
-    }
-    ul {
-        @extend .col;
-        width: 200px;
-        padding: 0 18px;
-        margin: 0;
-    }
-    i {display: none;}
-    #social-links {
-        float: right;
-        i {display: inline-block;}
+        padding: 14px 0;
     }
 }
 
 #main {
-    // Exists so that the container fills the entire height of the page.
-    /* position: absolute; */
     position: relative;
-    //
-    top: 0;
-    width: $page_width; height: 100%;
-    padding-left: 60px;
-    /* margin-left: $left_offset; */
-    margin: 0 auto; min-height: 800px;
+    width: $page_width;
+    margin: 0 auto;
+    min-height: 600px;
     background: #ffffff;
     /* @include box-shadow(0 0 28px 0 #ececec); */
-    /* $style: 1px solid #eee; */
-    /* border-left: $style; */
-    /* border-right: $style; */
-    h1 {font-size: $h1_fs + 16px;}
+}
+
+#nav {
+    margin-top: 4px;
+    font-size: $sub2_fs;
+    color: darken($reverse_font_color, 10%);
+    .inner {
+        width: $page_width;
+        margin: 0 auto;
+        padding: 0;
+        text-align: right;
+    }
+    li {
+        display: inline-block;
+        margin: 0 10px;
+        &.last {margin-right: 0;}
+        a {
+            background: none;
+            color: lighten($font_color, 16%);
+            &:hover {color: $codeniche_color;}
+        }
+    }
 }
 
 li {list-style-type: none;}
@@ -164,15 +145,14 @@ a {
     color: $font_color;
     text-decoration: none;
     &:hover {background: $reverse_font_color;}
-    &:active {background: $niche_color; color: #ffffff;}
+    &:active {background: $codeniche_color; color: #ffffff;}
 }
 
 #home {
     position: relative;
-    width: 840px;
-    padding: 10px 30px;
+    padding: 10px 40px;
     background: $reverse_font_color;
-    border-radius: 0 4px 4px 4px;
+    border-radius: 4px;
 }
 
 .company-info {
@@ -180,67 +160,21 @@ a {
     line-height: 1.6em;
 }
 
-.logo {
-    position: absolute;
-    bottom: -12px; left: 0px;
-    border: 12px solid $reverse_font_color;
-    border-radius: 4px;
-}
-
 .orange-bar {
-    position: absolute;
-    top: 0;
-    left: 0;;
     width: 100%;
-    height: 6px;
-    background: $niche_color;
-    z-index: 999;
-    /* left: -10px; */
-    /* height: 6px; */
-    /* width: $page_width + 30px + 20px; */
-    /* box-shadow: 0 4px 8px #ccc; */
+    height: 4px;
+    background: $codeniche_color;
 }
 
-#social-links {
-    /* position: fixed; */
-    /* top: 10%; right: 0; */
-    /* font-weight: bold; */
-    /* position: absolute; */
-    /* top: 70px; right: -130px; */
-}
-
-.social-link {
-    position: relative;
-    margin: 4px 10px;
-    padding: 4px 0;
-    /* color: lighten($font_color, 8%); */
-    /* background: $reverse_font_color; */
-    /* border-radius: 2px 0 0 2px; */
-    /* border-radius: 0 2px 2px 0; */
-    cursor: pointer;
-    width: 110px;
-    /* float: right; */
-    /* clear: right; */
-    text-align: right;
-    &:first-child {margin-top: 0;}
-    &:hover {
-        /* width: 140px; */
-        /* left: 30px; */
-        background: darken($reverse_font_color, 10%);
-    }
-    &:active {
-        background: $niche_color;
-        color: #ffffff;
-    }
-    /* Font icons */
-    i {
-        float: right;
-        display: inline-block;
-        width: 24px;
-        margin-left: 8px;
-        color: $font_color;
-        background: $reverse_font_color;
-        text-align: center;
+ul.social-links, ul.page-links {
+    li {
+        &:hover {}
+        &:active {}
+        i {
+            position: absolute;
+            right: 40px;
+            color: darken($reverse_blended_font_color, 16%);
+        }
     }
 }
 

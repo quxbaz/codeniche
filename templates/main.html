@@ -10,19 +10,21 @@
 
 <body id="body">
 
-  <!-- <img src="http://farm9.staticflickr.com/8151/7192320784_9880269589.jpg" style="height: 100%; position: absolute; width: 100%; opacity: 0.8;" /> -->
   <div class="orange-bar"></div>
+
+  <div id="nav">
+    <ul class="inner">
+      <li><a href="home">home</a></li> /
+      <li><a href="portfolio">portfolio</a></li> /
+      <li><a href="about">about</a></li> /
+      <li class="last"><a href="contact">contact</a></li>
+    </ul>
+  </div>
 
   <div id="main">
 
     <div id="header">
-      <a href="home"><img class="logo" src="static/imgs/logo/logo_round_80x80.png" /></a>
-      <ul>
-        <li class="first"><a href="home">Home</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="about">About</a></li>
-        <li class="last"><a href="contact">Contact</a></li>
-      </ul>
+      <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
     </div> <!-- #header -->
 
     {% include subpage %}
@@ -31,22 +33,28 @@
 
   <div id="footer" class="clearfix">
     <div class="inner">
-      <ul>
-        <li><i class="icon-envelope-alt"></i> mysite@mygreatsite.com</li>
-        <li><i class="icon-phone"></i> (123) 456-7890</li>
+      <ul class="page-links">
+        <li>Home<i class="icon-home"></i></li>
+        <li>Portfolio<i class="icon-folder-close"></i></li>
+        <li>About<i class="icon-user"></i></li>
+        <li>Contact<i class="icon-comment"></i></li>
+      </ul>
+      <ul class="social-links">
+        <li>LinkedIn<i class="icon-linkedin"></i></li>
+        <li>Facebook<i class="icon-facebook"></i></li>
+        <li>Twitter<i class="icon-twitter"></i></li>
+        <li>Google+<i class="icon-google-plus"></i></li>
       </ul>
       <ul>
-        <li><i class="icon-map-marker"></i> 555 Fake St<br/>Brooklyn, NY 12345</li>
+        <li>mysite@codeniche.com</li>
+        <li>(555) 555-5555</li>
+        <li>555 Fake St</li>
+        <li>Brooklyn, NY 12345</li>
       </ul>
-      <div id="social-links">
-        <div class="social-link">LinkedIn<i class="icon-linkedin"></i></div>
-        <div class="social-link">Facebook<i class="icon-facebook"></i></div>
-        <div class="social-link">Twitter<i class="icon-twitter"></i></div>
-        <div class="social-link">Google+<i class="icon-google-plus"></i></div>
-      </div>
     </div>
   </div> <!-- #footer -->
 
   <script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
+
 </body>
 </html>
