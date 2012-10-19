@@ -43,11 +43,13 @@ $fs_block: $fs + 10px;
 
 
 $font_color: #384247;
-$bg_color: #ffffff;
-$reverse_font_color: #e4e4e4;
+$reverse_font_color: #e6e6e6;
 $reverse_blended_font_color: #b2b2b2;
 $reverse_bg_color: #2a2a2a;
-$codeniche_color: #ff6b44;
+$codeniche_orange: #ff6b44;
+$codeniche_blue: #22aacc;
+$codeniche_grey: #aaaaaa;
+$codeniche_lightgrey: #e6e6e6;
 
 
 //--------------------------------------------------------------------
@@ -69,7 +71,7 @@ body {
     min-width: $page_width;
     // Ensures that the footer doesn't occlude content on shorter //
     // screens.
-    padding-bottom: 200px;
+    padding-bottom: 240px;
     //
     font-family: $font_family;
     font-size: $fs;
@@ -139,7 +141,7 @@ body {
         a {
             background: none;
             color: lighten($font_color, 16%);
-            &:hover {color: $codeniche_color;}
+            &:hover {color: $codeniche_orange;}
         }
     }
 }
@@ -150,46 +152,43 @@ a {
     color: $font_color;
     text-decoration: none;
     &:hover {background: $reverse_font_color;}
-    &:active {background: $codeniche_color; color: #ffffff;}
+    &:active {background: $codeniche_orange; color: #ffffff;}
 }
 
-#home {position: relative;}
+#home, #portfolio, #about, #contact {position: relative;}
 
 .block {
     position: relative;
     margin: {top: 12px; bottom: 12px;}
-    padding: 28px 40px;
+    padding: 16px 30px;
     background: lighten($reverse_font_color, 6%);
     border-radius: 4px;
     font-size: $fs_block;
     line-height: 1.6em;
+    em {
+        color: $codeniche_blue;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        .slash {color: darken($codeniche_lightgrey, 10%);}
+    }
 }
 
-.big {
-    color: lighten($font_color, 4%);
-    font-size: 200%;
-    text-shadow: 0 -1px #ddd;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: none;
-    .slash {color: $codeniche_color;}
-}
-
-.recent-work {
+.columns-2 {
     font-size: 0;
     .block {
-        display: inline-block;
-        width: $page_width / 2 - 80px - 12px;
+        @extend .col;
+        width: $page_width / 2 - 60px - 12px;
         min-height: 200px;
         font-size: $fs_block;
-        &.last {margin-left: 24px;}
     }
+    .block + .block {margin-left: 24px;}
 }
 
 .orange-bar {
     width: 100%;
     height: 4px;
-    background: $codeniche_color;
+    background: $codeniche_orange;
 }
 
 ul.social-links, ul.page-links {

@@ -473,7 +473,7 @@ table {
 .clearfix {
   zoom: 1; }
 
-.col, #footer ul {
+.col, #footer ul, .columns-2 .block {
   display: inline-block;
   vertical-align: top; }
 
@@ -511,7 +511,7 @@ body {
   positon: relative;
   width: 100%;
   min-width: 860px;
-  padding-bottom: 200px;
+  padding-bottom: 240px;
   font-family: helvetical, arial, sans-serif;
   font-size: 15px;
   color: #384247;
@@ -562,7 +562,7 @@ body {
 #nav {
   margin-top: 4px;
   font-size: 13px;
-  color: #cbcbcb; }
+  color: #cdcdcd; }
   #nav .inner {
     width: 860px;
     margin: 0 auto;
@@ -586,43 +586,39 @@ a {
   color: #384247;
   text-decoration: none; }
   a:hover {
-    background: #e4e4e4; }
+    background: #e6e6e6; }
   a:active {
     background: #ff6b44;
     color: #ffffff; }
 
-#home {
+#home, #portfolio, #about, #contact {
   position: relative; }
 
 .block {
   position: relative;
   margin-top: 12px;
   margin-bottom: 12px;
-  padding: 28px 40px;
-  background: #f3f3f3;
+  padding: 16px 30px;
+  background: #f5f5f5;
   border-radius: 4px;
   font-size: 25px;
   line-height: 1.6em; }
+  .block em {
+    color: #22aacc;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none; }
+    .block em .slash {
+      color: #cdcdcd; }
 
-.big {
-  color: #414d52;
-  font-size: 200%;
-  text-shadow: 0 -1px #dddddd;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: none; }
-  .big .slash {
-    color: #ff6b44; }
-
-.recent-work {
+.columns-2 {
   font-size: 0; }
-  .recent-work .block {
-    display: inline-block;
-    width: 338px;
+  .columns-2 .block {
+    width: 358px;
     min-height: 200px;
     font-size: 25px; }
-    .recent-work .block.last {
-      margin-left: 24px; }
+  .columns-2 .block + .block {
+    margin-left: 24px; }
 
 .orange-bar {
   width: 100%;
