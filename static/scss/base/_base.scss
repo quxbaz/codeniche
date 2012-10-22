@@ -60,55 +60,63 @@ $left_offset: 40px;
 //--------------------------------------------------------------------
 
 
+html {
+    height: 100%;
+}
+
 body {
+    overflow: auto;
     positon: relative;
-    width: 100%;
+    width: 100%; height: 100%;
     min-width: $page_width;
     // Ensures that the footer doesn't occlude content on shorter
     // screens.
-    padding-bottom: 240px;
+    /* padding-bottom: 240px; */
     //
     font-family: $font_family;
     font-size: $fs;
     color: $font_color;
     line-height: 1.8em;
+    /* background: url("/static/imgs/textures/subtle_grey_2x.png") top left repeat; */
+    background: url("/static/imgs/textures/dark_wood.png") top left repeat;
+    /* background: url("/static/imgs/textures/dark_wall.png") top left repeat; */
+    /* background: url("/static/imgs/textures/dark_dotted.png") top left repeat; */
+    /* background: url("/static/imgs/textures/dark_geometric.png") top left repeat; */
 }
 
 #header {
     position: relative;
     width: 100%;
-    margin: 24px 0 30px 0;
+    margin: 28px 0 24px 0;
     a {
         &:hover {background: none;}
         &:active {background: none;}
     }
 }
 
-#logo-img {
-    position: absolute;
-    top: 0; left: -118px;
-}
-
-#logo-text {
-    position: absolute;
-    top: 104px; left: -118px;
-    width: 102px;
-    font-size: 17px;
-    text-align: right;
-    color: $codeniche_grey;
-    .niche-text {color: $codeniche_orange;}
-}
+.niche-text {color: $codeniche_orange;}
 
 #pulldown {
     position: fixed;
-    top: 0;
-    height: 80px;
+    bottom: 0; left: 50%;
+    width: 80px;
+    padding: 10px 14px 6px 14px;
+    /* margin-left: -($page_width / 2); */
+    margin-left: -50px;
+    text-align: center;
+    background: lighten($codeniche_blue, 5.5%);
+    color: #ffffff;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        color: darken($codeniche_blue, 10%);
+    }
 }
 
 #footer {
-    position: fixed; top: 0; width: 100%; height: 112px;
+    position: fixed; bottom: 0; width: 100%; height: 140px;
     display: none;
-    background: $reverse_bg_color;
+    background: darken($reverse_bg_color, 4%);
     color: $reverse_blended_font_color;
     font-size: $sub3_fs;
     a {
@@ -126,7 +134,7 @@ body {
     ul {
         position: relative;
         width: $page_width / 3 - 40px;
-        line-height: 1.8em;
+        line-height: 2.2em;
         @extend .col;
     }
     ul + ul {
@@ -147,7 +155,9 @@ body {
 #main {
     position: relative;
     width: $page_width;
+    min-height: 100%;
     margin: 0 auto;
+    padding: 0 40px 60px 40px;
     background: #ffffff;
 }
 
@@ -158,7 +168,7 @@ body {
     ul {
         margin: 0;
         padding: 0;
-        text-align: right;
+        text-align: center;
     }
     li {
         display: inline-block;
@@ -171,7 +181,7 @@ body {
         }
     }
     .current {
-        border-bottom: 2px solid $codeniche_orange;
+        color: $codeniche_orange;
     }
 }
 
@@ -212,15 +222,54 @@ a {
     .block + .block {margin-left: 24px;}
 }
 
-#home, #portfolio, #about, #contact {position: relative;}
+#home, #portfolio, #about, #contact, #work {position: relative;}
+
+.headline {text-align: center;}
+
+#work {
+    .sep {
+        width: 100%;
+        text-align: center;
+        color: $codeniche_grey;
+    }
+    .block {
+        /* i { */
+        /*     position: absolute; */
+        /*     top: 40px; right: 20px; */
+        /*     font-size: 160px; */
+        /*     opacity: 0.22; */
+        /*     color: #ccc; */
+        /* } */
+        /* .icon-pencil { */
+        /*     font-size: 140px; */
+        /*     top: 30px; */
+        /* } */
+        /* .icon-search { */
+        /*     font-size: 120px; */
+        /*     top: 22px; */
+        /* } */
+    }
+}
 
 .welcome {
-    font-size: $h1_fs;
+    font-size: $h1_fs + 11px;
     line-height: 1.54em;
+    text-align: center;
+    background: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    strong {
+        font-weight: normal;
+        color: $codeniche_orange;
+    }
 }
 
 .portfolio-sites .block {
-    &.pic {line-height: 0;}
+    &.pic {
+        padding: 16px;
+        line-height: 0;
+        width: 358px + 28px;
+    }
     img {width: 100%;}
 }
 
@@ -228,12 +277,17 @@ a {
     width: 100%;
     height: 3px;
     background: $codeniche_orange;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    width: $page_width + 80px;
+    margin-left: -($page_width / 2) - 40px;
 }
 
 ul.social-links, ul.page-links {
     li i {
         position: absolute;
-        right: 160px;
+        right: 40px;
         color: darken($reverse_blended_font_color, 16%);
     }
 }

@@ -13,32 +13,25 @@
   <div class="orange-bar"></div>
 
   <div id="main">
-    <!-- <div id="pulldown"></div> -->
+    <div id="pulldown"><span class="text">more</span> <i class="icon-arrow-up"></i></div>
     <div id="nav">
       <ul>
         <li><a href="home">home</a></li> /
         <li><a href="portfolio">portfolio</a></li> /
         <li><a href="work">our work</a></li> /
+        <!-- <li><a href="about">about</a></li> / -->
         <li class="last"><a href="contact">contact</a></li>
       </ul>
     </div>
     <div id="header">
-      {% if data.subpage == "home" %}
-        <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
-      {% endif%}
+      <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
     </div> <!-- #header -->
     <div id="subpage">
-      {% if data.subpage != "home" %}
-        <a href="home">
-          <img id="logo-img" src="static/imgs/logo/whole/logo.png" />
-          <div id="logo-text">code<span class="niche-text">niche</span></div>
-        </a>
-      {% endif %}
       {% include data.subpage + ".html" %}
     </div> <!-- #subpage -->
   </div> <!-- #main -->
 
-  <div id="footer" class="clearfix">
+  <div id="footer">
     <div class="inner">
       <ul class="page-links">
         <a href="home"><li>Home<i class="icon-home"></i></li></a>
