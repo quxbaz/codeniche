@@ -7,7 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/<subpage>')
 def home(subpage='home'):
-    return render_template('main.html', subpage=subpage + '.html')
+    data = {'subpage': subpage}
+    return render_template('main.html', data=data)
 
 if __name__ == '__main__':
     app.run(host='localhost', debug=True)

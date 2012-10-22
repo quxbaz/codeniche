@@ -24,17 +24,12 @@ $page_width: 860px;
 
 
 $font_family: helvetical, arial, sans-serif;
-$fs: 15px;
-$h1_fs: $fs + 10px;
-$h2_fs: $fs + 3px;
-$h3_fs: $fs;
-$h4_fs: $fs;
-$h5_fs: $fs;
-$h6_fs: $fs;
-$sub1_fs: $fs - 1px;
-$sub2_fs: $fs - 2px;
-$sub3_fs: $fs - 3px;
-$fs_block: $fs + 10px;
+$fs: 16px;
+$h1_fs: $fs + 9px;
+$h2_fs: $fs + 2px;
+$sub1_fs: $fs - 2px;
+$sub2_fs: $fs - 3px;
+$sub3_fs: $fs - 4px;
 
 
 //--------------------------------------------------------------------
@@ -82,11 +77,27 @@ body {
 #header {
     position: relative;
     width: 100%;
-    margin: 40px 0 30px 0;
+    margin: 30px 0;
+    img {};
     a {
         &:hover {background: none;}
         &:active {background: none;}
     }
+}
+
+#logo-img {
+    position: absolute;
+    top: 0; left: -118px;
+}
+
+#logo-text {
+    position: absolute;
+    top: 102px; left: -118px;
+    width: 102px;
+    font-size: 17px;
+    text-align: right;
+    color: $codeniche_grey;
+    .niche-text {color: $codeniche_orange;}
 }
 
 #footer {
@@ -94,11 +105,18 @@ body {
     background: $reverse_bg_color;
     color: $reverse_blended_font_color;
     font-size: $sub3_fs;
+    /* display: none; */
+    /* max-height: 20px; */
+    /* &:hover {max-height: none;} */
     a {
         color: $reverse_blended_font_color;
         &:hover {
             color: #ffffff;
             i {color: #ffffff;}
+        }
+        &:active {
+            color: $codeniche_orange;
+            i {color: $codeniche_orange;}
         }
     }
     ul, li {margin: 0; padding: 0;}
@@ -118,13 +136,15 @@ body {
     }
 }
 
+#subpage {
+    position: relative;
+}
+
 #main {
     position: relative;
     width: $page_width;
     margin: 0 auto;
-    min-height: 600px;
     background: #ffffff;
-    /* @include box-shadow(0 0 28px 0 #ececec); */
 }
 
 #nav {
@@ -147,6 +167,9 @@ body {
             &:hover {color: $codeniche_orange;}
         }
     }
+    .current {
+        border-bottom: 2px solid $codeniche_orange;
+    }
 }
 
 li {list-style-type: none;}
@@ -156,15 +179,13 @@ a {
     text-decoration: none;
 }
 
-#home, #portfolio, #about, #contact {position: relative;}
-
 .block {
     position: relative;
     margin: 24px 0;
     padding: 16px 30px;
     background: lighten($reverse_font_color, 6%);
     border-radius: 4px;
-    font-size: $fs_block;
+    font-size: $fs;
     line-height: 1.6em;
     em {
         color: $codeniche_blue;
@@ -173,6 +194,7 @@ a {
         text-decoration: none;
         .slash {color: darken($codeniche_lightgrey, 10%);}
     }
+    a {color: $codeniche_orange;}
 }
 
 .columns-2 {
@@ -180,12 +202,23 @@ a {
     margin: 24px 0;
     .block {
         @extend .col;
-        width: $page_width / 2 - 60px - 12px;
-        min-height: 200px;
+        width: $page_width / 2 - 60px - 12px;  // = 358px
         margin: 0;
-        font-size: $fs_block;
+        font-size: $fs;
     }
     .block + .block {margin-left: 24px;}
+}
+
+#home, #portfolio, #about, #contact {position: relative;}
+
+.welcome {
+    font-size: $h1_fs;
+    line-height: 1.54em;
+}
+
+.portfolio-sites .block {
+    &.pic {line-height: 0;}
+    img {width: 100%;}
 }
 
 .orange-bar {

@@ -16,7 +16,7 @@
     <ul class="inner">
       <li><a href="home">home</a></li> /
       <li><a href="portfolio">portfolio</a></li> /
-      <li><a href="about">about</a></li> /
+      <li><a href="work">our work</a></li> /
       <li class="last"><a href="contact">contact</a></li>
     </ul>
   </div>
@@ -24,10 +24,20 @@
   <div id="main">
 
     <div id="header">
-      <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
+      {% if data.subpage == "home" %}
+        <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
+      {% endif%}
     </div> <!-- #header -->
 
-    {% include subpage %}
+    <div id="subpage">
+      {% if data.subpage != "home" %}
+        <a href="home">
+          <img id="logo-img" src="static/imgs/logo/whole/logo.png" />
+          <div id="logo-text">code<span class="niche-text">niche</span></div>
+        </a>
+      {% endif %}
+      {% include data.subpage + ".html" %}
+    </div>
 
   </div> <!-- #main -->
 
@@ -36,7 +46,8 @@
       <ul class="page-links">
         <a href="home"><li>Home<i class="icon-home"></i></li></a>
         <a href="portfolio"><li>Portfolio<i class="icon-folder-close"></i></li></a>
-        <a href="about"><li>About<i class="icon-user"></i></li></a>
+        <a href="work"><li>Work<i class="icon-user"></i></li></a>
+        <!-- <a href="about"><li>About<i class="icon-user"></i></li></a> -->
         <a href="contact"><li>Contact<i class="icon-comment"></i></li></a>
       </ul>
       <ul class="social-links">
@@ -55,6 +66,7 @@
   </div> <!-- #footer -->
 
   <script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/app/app.js"></script>
 
 </body>
 </html>
