@@ -12,23 +12,21 @@
 
   <div class="orange-bar"></div>
 
-  <div id="nav">
-    <ul class="inner">
-      <li><a href="home">home</a></li> /
-      <li><a href="portfolio">portfolio</a></li> /
-      <li><a href="work">our work</a></li> /
-      <li class="last"><a href="contact">contact</a></li>
-    </ul>
-  </div>
-
   <div id="main">
-
+    <!-- <div id="pulldown"></div> -->
+    <div id="nav">
+      <ul>
+        <li><a href="home">home</a></li> /
+        <li><a href="portfolio">portfolio</a></li> /
+        <li><a href="work">our work</a></li> /
+        <li class="last"><a href="contact">contact</a></li>
+      </ul>
+    </div>
     <div id="header">
       {% if data.subpage == "home" %}
         <a href="home"><img src="static/imgs/logo/whole/codeniche.png" /></a>
       {% endif%}
     </div> <!-- #header -->
-
     <div id="subpage">
       {% if data.subpage != "home" %}
         <a href="home">
@@ -37,8 +35,7 @@
         </a>
       {% endif %}
       {% include data.subpage + ".html" %}
-    </div>
-
+    </div> <!-- #subpage -->
   </div> <!-- #main -->
 
   <div id="footer" class="clearfix">
@@ -51,9 +48,9 @@
         <a href="contact"><li>Contact<i class="icon-comment"></i></li></a>
       </ul>
       <ul class="social-links">
-        <a href="https://linkedin.com"><li>LinkedIn<i class="icon-linkedin"></i></li></a>
-        <a href="https://facebook.com"><li>Facebook<i class="icon-facebook"></i></li></a>
-        <a href="https://twitter.com"><li>Twitter<i class="icon-twitter"></i></li></a>
+        <a href="https://www.linkedin.com"><li>LinkedIn<i class="icon-linkedin"></i></li></a>
+        <a href="https://www.facebook.com"><li>Facebook<i class="icon-facebook"></i></li></a>
+        <a href="https://www.twitter.com"><li>Twitter<i class="icon-twitter"></i></li></a>
         <a href="https://plus.google.com"><li>Google+<i class="icon-google-plus"></i></li></a>
       </ul>
       <ul>
