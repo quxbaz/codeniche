@@ -16,3 +16,6 @@
 - Find a good font for welcome info.
 - Do portfolio page. Find a way to represent screenshots with a consistent look. (sketches?)
 - Darken codeniche_blue
+- On hovering over the home page text. Fade slowly to white so that
+  only "simplicity" stands out. Also add a transparent silloute image
+  of buildings.

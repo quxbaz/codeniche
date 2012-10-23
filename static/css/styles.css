@@ -550,7 +550,7 @@ body {
   text-align: center;
   background: #2eb9dc;
   color: #ffffff;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer; }
   #pulldown:hover {
     color: #1b86a0; }
@@ -561,7 +561,7 @@ body {
   width: 100%;
   height: 140px;
   display: none;
-  background: #202020;
+  background: #111111;
   color: #b2b2b2;
   font-size: 12px; }
   #footer a {
@@ -582,7 +582,7 @@ body {
     width: 246.667px;
     line-height: 2.2em; }
   #footer ul + ul {
-    border-left: 1px solid #3e3e3e;
+    border-left: 1px solid #2f2f2f;
     padding-left: 44px; }
   #footer .inner {
     width: 860px;
@@ -597,13 +597,24 @@ body {
   width: 860px;
   min-height: 100%;
   margin: 0 auto;
-  padding: 0 40px 60px 40px;
+  padding: 40px 40px 60px 40px;
   background: #ffffff; }
 
 #nav {
-  padding-top: 4px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 1020px;
+  margin-left: -510px;
+  padding: 4px 0;
+  background: #2eb9dc;
+  text-align: center;
+  z-index: 2;
   font-size: 13px;
-  color: #cdcdcd; }
+  color: #536269;
+  -moz-box-shadow: 0 2px 10px #aaaacc;
+  -webkit-box-shadow: 0 2px 10px #aaaacc;
+  box-shadow: 0 2px 10px #aaaacc; }
   #nav ul {
     margin: 0;
     padding: 0;
@@ -614,12 +625,23 @@ body {
     #nav li.last {
       margin-right: 0; }
     #nav li a {
-      background: none;
-      color: #5c6c75; }
+      color: #ffffff;
+      font-weight: bold; }
       #nav li a:hover {
-        color: #ff6b44; }
+        color: #1b86a0; }
   #nav .current {
-    color: #ff6b44; }
+    color: #1b86a0; }
+
+.nav-tri, .nav-tri-right {
+  position: absolute;
+  bottom: -40px;
+  width: 40px;
+  height: 40px;
+  background: url("/static/imgs/misc/nav_tris.png") 0 no-repeat; }
+
+.nav-tri-right {
+  right: 0;
+  background-position: -40px 0; }
 
 li {
   list-style-type: none; }
@@ -683,17 +705,25 @@ a {
   /*     top: 22px; */
   /* } */ }
 
-.welcome {
-  font-size: 36px;
+.intro {
+  padding-top: 24px;
+  padding-bottom: 24px;
   font-family: georgia;
+  font-size: 37px;
   line-height: 1.54em;
-  text-align: center;
-  background: none;
-  padding-left: 40px;
-  padding-right: 40px; }
-  .welcome strong {
+  text-align: center; }
+  .intro strong {
     font-weight: normal;
     color: #ff6b44; }
+
+.banner {
+  width: 860px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: -40px;
+  border-radius: 0;
+  background: #252525;
+  color: #e6e6e6; }
 
 .portfolio-sites .block.pic {
   padding: 16px;
