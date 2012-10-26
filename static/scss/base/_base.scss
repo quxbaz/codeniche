@@ -80,7 +80,7 @@ body {
     color: $font_color;
     line-height: 1.8em;
     /* background: url("/static/imgs/textures/subtle_grey_2x.png") top left repeat; */
-    background: url("/static/imgs/textures/dark_wood.png") top left repeat;
+    background: url("/static/imgs/textures/dark_wood.png") 0 0 repeat fixed;
     /* background: url("/static/imgs/textures/dark_wall.png") top left repeat; */
     /* background: url("/static/imgs/textures/dark_dotted.png") top left repeat; */
     /* background: url("/static/imgs/textures/dark_geometric.png") top left repeat; */
@@ -103,14 +103,12 @@ body {
     bottom: 0; left: 50%;
     width: 80px;
     padding: 10px 14px 6px 14px;
-    /* margin-left: -($page_width / 2); */
     margin-left: -50px;
     text-align: center;
     background: $codeniche_brightblue;
-    color: #ffffff;
     z-index: 2;
     cursor: pointer;
-    &:hover {color: $codeniche_darkblue;}
+    @extend .blue-hover;
 }
 
 #footer {
@@ -182,13 +180,19 @@ body {
         display: inline-block;
         margin: 0 10px;
         &.last {margin-right: 0;}
-        a {
-            color: #ffffff;
-            font-weight: bold;
-            &:hover {color: $codeniche_darkblue;}
-        }
+        font-weight: bold;
+        a {@extend .blue-hover;}
     }
     .current {color: $codeniche_darkblue;}
+}
+
+.blue-hover {
+    color: #ffffff;
+    @include transition(color 120ms linear);
+    &:hover {
+        color: $codeniche_darkblue;
+        @include transition(color 120ms linear);
+    }
 }
 
 .nav-tri {
@@ -280,6 +284,13 @@ a {
         font-weight: normal;
         color: $codeniche_orange;
     }
+}
+
+#home .intro:hover {
+    /* background-color: darken($reverse_font_color, 7%); */
+    /* @include transition(background-color 600ms ease-in); */
+    color: lighten($reverse_bg_color, 11%);
+    @include transition(color 400ms ease-out);
 }
 
 .banner {

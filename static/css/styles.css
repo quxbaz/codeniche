@@ -522,7 +522,7 @@ body {
   color: #384247;
   line-height: 1.8em;
   /* background: url("/static/imgs/textures/subtle_grey_2x.png") top left repeat; */
-  background: url("/static/imgs/textures/dark_wood.png") top left repeat;
+  background: url("/static/imgs/textures/dark_wood.png") 0 0 repeat fixed;
   /* background: url("/static/imgs/textures/dark_wall.png") top left repeat; */
   /* background: url("/static/imgs/textures/dark_dotted.png") top left repeat; */
   /* background: url("/static/imgs/textures/dark_geometric.png") top left repeat; */ }
@@ -545,15 +545,11 @@ body {
   left: 50%;
   width: 80px;
   padding: 10px 14px 6px 14px;
-  /* margin-left: -($page_width / 2); */
   margin-left: -50px;
   text-align: center;
   background: #2eb9dc;
-  color: #ffffff;
   z-index: 2;
   cursor: pointer; }
-  #pulldown:hover {
-    color: #1b86a0; }
 
 #footer {
   position: fixed;
@@ -621,16 +617,27 @@ body {
     text-align: center; }
   #nav li {
     display: inline-block;
-    margin: 0 10px; }
+    margin: 0 10px;
+    font-weight: bold; }
     #nav li.last {
       margin-right: 0; }
-    #nav li a {
-      color: #ffffff;
-      font-weight: bold; }
-      #nav li a:hover {
-        color: #1b86a0; }
   #nav .current {
     color: #1b86a0; }
+
+.blue-hover, #pulldown, #nav li a {
+  color: #ffffff;
+  -webkit-transition: color 120ms linear;
+  -moz-transition: color 120ms linear;
+  -o-transition: color 120ms linear;
+  -ms-transition: color 120ms linear;
+  transition: color 120ms linear; }
+  .blue-hover:hover, #pulldown:hover, #nav li a:hover {
+    color: #1b86a0;
+    -webkit-transition: color 120ms linear;
+    -moz-transition: color 120ms linear;
+    -o-transition: color 120ms linear;
+    -ms-transition: color 120ms linear;
+    transition: color 120ms linear; }
 
 .nav-tri, .nav-tri-right {
   position: absolute;
@@ -715,6 +722,16 @@ a {
   .intro strong {
     font-weight: normal;
     color: #ff6b44; }
+
+#home .intro:hover {
+  /* background-color: darken($reverse_font_color, 7%); */
+  /* @include transition(background-color 600ms ease-in); */
+  color: #373737;
+  -webkit-transition: color 400ms ease-out;
+  -moz-transition: color 400ms ease-out;
+  -o-transition: color 400ms ease-out;
+  -ms-transition: color 400ms ease-out;
+  transition: color 400ms ease-out; }
 
 .banner {
   width: 860px;
