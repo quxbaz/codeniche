@@ -53,7 +53,7 @@ $codeniche_lightgrey: #e6e6e6;
 // HTML
 //--------------------------------------------------------------------
 
-
+$line_height: 1.8em;
 $left_offset: 40px;
 
 
@@ -78,7 +78,7 @@ body {
     font-family: $font_family;
     font-size: $fs;
     color: $font_color;
-    line-height: 1.8em;
+    line-height: $line_height;
     /* background: url("/static/imgs/textures/subtle_grey_2x.png") top left repeat; */
     background: url("/static/imgs/textures/dark_wood.png") 0 0 repeat fixed;
     /* background: url("/static/imgs/textures/dark_wall.png") top left repeat; */
@@ -234,8 +234,8 @@ a {
 }
 
 .columns-2 {
-    font-size: 0;
     margin: 24px 0;
+    font-size: 0;
     .block {
         @extend .col;
         width: $page_width / 2 - 60px - 12px;  // = 358px
@@ -255,23 +255,6 @@ a {
         text-align: center;
         color: $codeniche_grey;
     }
-    .block {
-        /* i { */
-        /*     position: absolute; */
-        /*     top: 40px; right: 20px; */
-        /*     font-size: 160px; */
-        /*     opacity: 0.22; */
-        /*     color: #ccc; */
-        /* } */
-        /* .icon-pencil { */
-        /*     font-size: 140px; */
-        /*     top: 30px; */
-        /* } */
-        /* .icon-search { */
-        /*     font-size: 120px; */
-        /*     top: 22px; */
-        /* } */
-    }
 }
 
 .intro {
@@ -286,11 +269,12 @@ a {
     }
 }
 
-#home .intro:hover {
-    /* background-color: darken($reverse_font_color, 7%); */
-    /* @include transition(background-color 600ms ease-in); */
-    color: lighten($reverse_bg_color, 11%);
+#home .intro {
     @include transition(color 400ms ease-out);
+    &:hover {
+        color: lighten($reverse_bg_color, 11%);
+        @include transition(color 400ms ease-out);
+    }
 }
 
 .banner {
@@ -302,13 +286,53 @@ a {
     color: $reverse_font_color;
 }
 
-.portfolio-sites .block {
+#portfolio .block {
     &.pic {
         padding: 16px;
         line-height: 0;
         width: 358px + 28px;
+        @include transition(background-color 600ms ease-out);
+        &:hover {
+            background-color: lighten($codeniche_brightblue, 11%);
+            @include transition(background-color 600ms ease-out);
+        }
+        .pulltab {
+            cursor: pointer;
+            background-color: $codeniche_brightblue;
+            a {
+                display: inline-block;
+                width: 100%; height: 100%;
+                color: #ffffff;
+            }
+            &:hover {
+                color: #ffffff;
+                background-color: $codeniche_orange;
+            }
+        }
     }
     img {width: 100%;}
+}
+
+.pulltab {
+    display: inline-block;
+    min-width: 72px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: $codeniche_brightblue;
+    @extend .blue-hover;
+}
+
+.site-info {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    bottom: 16px;
+    width: inherit;
+    padding: 16px;
+    margin-left: -16px;
+    line-height: $line_height;
+    background: #fcfcfc;
 }
 
 .orange-bar {
