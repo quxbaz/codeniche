@@ -740,7 +740,7 @@ a {
   -ms-transition: background-color 600ms ease-out;
   transition: background-color 600ms ease-out; }
   #portfolio .block.pic:hover {
-    background-color: #5ec9e4;
+    background-color: #74d1e8;
     -webkit-transition: background-color 600ms ease-out;
     -moz-transition: background-color 600ms ease-out;
     -o-transition: background-color 600ms ease-out;

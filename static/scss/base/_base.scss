@@ -293,7 +293,7 @@ a {
         width: 358px + 28px;
         @include transition(background-color 600ms ease-out);
         &:hover {
-            background-color: lighten($codeniche_brightblue, 11%);
+            background-color: lighten($codeniche_brightblue, 16%);
             @include transition(background-color 600ms ease-out);
         }
         .pulltab {
