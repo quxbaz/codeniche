@@ -3,7 +3,7 @@
 <html>
 <head>
   <title>Codeniche</title>
-  <!-- <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css"> -->
+  {#<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">#}
   <link rel="stylesheet" href="static/css/font-awesome.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="static/css/styles.css" type="text/css" media="screen" />
 </head>
@@ -13,7 +13,6 @@
   <div class="orange-bar"></div>
 
   <div id="main">
-    <div id="pulldown"><span class="text">more</span> <i class="icon-arrow-up"></i></div>
     <div id="nav">
       <div class="nav-tri"></div>
       <div class="nav-tri-right"></div>
@@ -31,22 +30,18 @@
     <div id="subpage">
       {% include data.subpage + ".html" %}
     </div> <!-- #subpage -->
-  </div> <!-- #main -->
-
-  <div id="footer">
-    <div class="inner">
+    <div id="footer">
       <ul class="page-links">
-        <a href="home"><li>Home<i class="icon-home"></i></li></a>
-        <a href="portfolio"><li>Portfolio<i class="icon-folder-close"></i></li></a>
-        <a href="work"><li>Work<i class="icon-wrench"></i></li></a>
-        <!-- <a href="about"><li>About<i class="icon-user"></i></li></a> -->
-        <a href="contact"><li>Contact<i class="icon-comment"></i></li></a>
+        <li><a href="home"><i class="icon-home"></i>Home</a></li>
+        <li><a href="portfolio"><i class="icon-folder-close"></i>Portfolio</a></li>
+        <li><a href="work"><i class="icon-wrench"></i>Work</a></li>
+        <li><a href="contact"><i class="icon-comment"></i>Contact</a></li>
       </ul>
       <ul class="social-links">
-        <a href="https://www.linkedin.com"><li>LinkedIn<i class="icon-linkedin"></i></li></a>
-        <a href="https://www.facebook.com"><li>Facebook<i class="icon-facebook"></i></li></a>
-        <a href="https://www.twitter.com"><li>Twitter<i class="icon-twitter"></i></li></a>
-        <a href="https://plus.google.com"><li>Google+<i class="icon-google-plus"></i></li></a>
+        <li><a href="https://www.linkedin.com"><i class="icon-linkedin"></i>LinkedIn</a></li>
+        <li><a href="https://www.facebook.com"><i class="icon-facebook"></i>Facebook</a></li>
+        <li><a href="https://www.twitter.com"><i class="icon-twitter"></i>Twitter</a></li>
+        <li><a href="https://plus.google.com"><i class="icon-google-plus"></i>Google+</a></li>
       </ul>
       <ul>
         <li>mysite@codeniche.com</li>
@@ -54,8 +49,8 @@
         <li>555 Fake St</li>
         <li>Brooklyn, NY 12345</li>
       </ul>
-    </div>
-  </div> <!-- #footer -->
+    </div> <!-- #footer -->
+  </div> <!-- #main -->
 
   <script type="text/javascript" src="static/js/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="static/js/app/app.js"></script>

@@ -552,14 +552,13 @@ body {
   cursor: pointer; }
 
 #footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 140px;
-  display: none;
+  position: relative;
+  width: inherit;
+  margin: 60px 0 0 -40px;
+  padding: 16px 40px;
+  font-size: 12px;
   background: #111111;
-  color: #b2b2b2;
-  font-size: 12px; }
+  color: #b2b2b2; }
   #footer a {
     color: #b2b2b2; }
     #footer a:hover {
@@ -576,14 +575,13 @@ body {
   #footer ul {
     position: relative;
     width: 246.667px;
+    width: 33%;
     line-height: 2.2em; }
+    #footer ul li {
+      min-height: 28px;
+      padding-left: 100px; }
   #footer ul + ul {
-    border-left: 1px solid #2f2f2f;
-    padding-left: 44px; }
-  #footer .inner {
-    width: 860px;
-    margin: 0 auto;
-    padding: 14px 0; }
+    border-left: 1px solid #2a2a2a; }
 
 #subpage {
   position: relative; }
@@ -593,7 +591,7 @@ body {
   width: 860px;
   min-height: 100%;
   margin: 0 auto;
-  padding: 40px 40px 60px 40px;
+  padding: 40px 40px 0 40px;
   background: #ffffff; }
 
 #nav {
@@ -790,8 +788,7 @@ a {
   margin-left: -470px; }
 
 ul.social-links li i, ul.page-links li i {
-  position: absolute;
-  right: 40px;
+  margin-right: 8px;
   color: #898989; }
 
 .image {
