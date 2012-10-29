@@ -433,37 +433,40 @@ table {
   display: inline-block; }
 
 .float-left {
-  float: left; }
+  float: left !important; }
 
 .float-right {
-  float: right; }
+  float: right !important; }
 
 .align-left {
-  text-align: left; }
+  text-align: left !important; }
 
 .align-right {
-  text-align: right; }
+  text-align: right !important; }
 
 .inline {
-  position: inline; }
+  position: inline !important; }
 
 .relative {
-  position: relative; }
+  position: relative !important; }
 
 .absolute {
-  position: absolute; }
+  position: absolute !important; }
 
 .fixed {
-  position: fixed; }
+  position: fixed !important; }
 
 .inline-block {
-  display: inline-block; }
+  display: inline-block !important; }
 
 .hide {
-  display: none; }
+  display: none !important; }
 
 .clickable {
-  cursor: pointer; }
+  cursor: pointer !important; }
+
+.font-size-0 {
+  font-size: 0; }
 
 .clearfix:before, .clearfix:after {
   content: "";
@@ -473,39 +476,39 @@ table {
 .clearfix {
   zoom: 1; }
 
-.col, #footer ul, .columns-2 .block {
+.col, #footer ul, .columns-2 .block, .column-extended {
   display: inline-block;
   vertical-align: top; }
 
 .fixed-width-10 {
-  width: 10px; }
+  width: 10px !important; }
 
 .fixed-width-20 {
-  width: 20px; }
+  width: 20px !important; }
 
 .fixed-width-30 {
-  width: 30px; }
+  width: 30px !important; }
 
 .fixed-width-40 {
-  width: 40px; }
+  width: 40px !important; }
 
 .fixed-width-50 {
-  width: 50px; }
+  width: 50px !important; }
 
 .fixed-width-60 {
-  width: 60px; }
+  width: 60px !important; }
 
 .fixed-width-70 {
-  width: 70px; }
+  width: 70px !important; }
 
 .fixed-width-80 {
-  width: 80px; }
+  width: 80px !important; }
 
 .fixed-width-90 {
-  width: 90px; }
+  width: 90px !important; }
 
 .fixed-width-100 {
-  width: 100px; }
+  width: 100px !important; }
 
 html {
   height: 100%; }
@@ -663,6 +666,11 @@ a {
   border-radius: 4px;
   font-size: 16px;
   line-height: 1.6em; }
+  .block h2 {
+    margin: 0 0 8px 0;
+    color: #22aacc;
+    font-size: 16px;
+    font-weight: normal; }
   .block em {
     color: #22aacc;
     font-weight: normal;
@@ -682,6 +690,18 @@ a {
     font-size: 16px; }
   .columns-2 .block + .block {
     margin-left: 24px; }
+
+.column-extended {
+  width: 358px;
+  padding: 0 30px; }
+  .column-extended .block {
+    width: 100%;
+    margin: 0 0 0 -30px; }
+  .column-extended .block + .block {
+    margin-top: 24px; }
+
+.column-extended + .column-extended {
+  margin-left: 24px; }
 
 #home, #portfolio, #about, #contact, #work {
   position: relative; }
@@ -790,6 +810,42 @@ a {
 ul.social-links li i, ul.page-links li i {
   margin-right: 8px;
   color: #898989; }
+
+.field, .contact-form input, .contact-form textarea {
+  padding: 4px 6px;
+  border: 1px solid #dbdbdb;
+  -webkit-transition: border-color 300ms linear;
+  -moz-transition: border-color 300ms linear;
+  -o-transition: border-color 300ms linear;
+  -ms-transition: border-color 300ms linear;
+  transition: border-color 300ms linear; }
+  .field:hover, .contact-form input:hover, .contact-form textarea:hover {
+    border: 1px solid #22aacc;
+    -webkit-transition: border-color 300ms linear;
+    -moz-transition: border-color 300ms linear;
+    -o-transition: border-color 300ms linear;
+    -ms-transition: border-color 300ms linear;
+    transition: border-color 300ms linear; }
+  .field:focus, .contact-form input:focus, .contact-form textarea:focus {
+    border: 1px solid #ff9b81;
+    outline: none; }
+
+.contact-form .field-block + .field-block {
+  margin-top: 14px; }
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  color: #536269; }
+  .contact-form label i {
+    color: #d7d7d7; }
+.contact-form input {
+  width: 346px; }
+.contact-form textarea {
+  display: block;
+  width: 346px;
+  margin-bottom: 2px;
+  border: 1px solid #dbdbdb;
+  resize: none; }
 
 .image {
   display: inline-block;
