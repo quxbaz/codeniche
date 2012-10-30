@@ -24,6 +24,7 @@ $page_width: 860px;
 
 
 $font_family: helvetical, arial, sans-serif;
+$line_height: 1.9em;
 $fs: 16px;
 $h1_fs: $fs + 9px;
 $h2_fs: $fs + 2px;
@@ -53,7 +54,6 @@ $codeniche_lightgrey: #e6e6e6;
 // MISC
 //--------------------------------------------------------------------
 
-$line_height: 1.8em;
 $left_offset: 40px;
 $block2_width: $page_width / 2 - 60px - 12px;  // = 358px
 
@@ -224,7 +224,7 @@ a {
     background: lighten($reverse_font_color, 6%);
     border-radius: 4px;
     font-size: $fs;
-    line-height: 1.6em;
+    line-height: $line_height;
     h2 {
         margin: 0 0 8px 0;
         color: $codeniche_blue;

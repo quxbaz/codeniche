@@ -523,7 +523,7 @@ body {
   font-family: helvetical, arial, sans-serif;
   font-size: 16px;
   color: #384247;
-  line-height: 1.8em;
+  line-height: 1.9em;
   /* background: url("/static/imgs/textures/subtle_grey_2x.png") top left repeat; */
   background: url("/static/imgs/textures/dark_wood.png") 0 0 repeat fixed;
   /* background: url("/static/imgs/textures/dark_wall.png") top left repeat; */
@@ -666,7 +666,7 @@ a {
   background: #f5f5f5;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 1.6em; }
+  line-height: 1.9em; }
   .block h2 {
     margin: 0 0 8px 0;
     color: #22aacc;
@@ -800,7 +800,7 @@ a {
   width: inherit;
   padding: 16px;
   margin-left: -16px;
-  line-height: 1.8em;
+  line-height: 1.9em;
   background: #fcfcfc; }
 
 .orange-bar {
