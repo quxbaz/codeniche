@@ -114,7 +114,8 @@ body {
 #footer {
     position: relative;
     width: inherit;
-    margin: 60px 0 0 -40px;
+    height: 130px;
+    margin: 80px 0 0 -40px;
     padding: 16px 40px;
     font-size: $sub3_fs;
     background: darken($reverse_bg_color, 4%);
@@ -154,7 +155,7 @@ body {
 #main {
     position: relative;
     width: $page_width;
-    min-height: 100%;
+    /* min-height: 100%; */
     margin: 0 auto;
     padding: 40px 40px 0 40px;
     background: #ffffff;
@@ -274,6 +275,7 @@ a {
 #work {
     .sep {
         width: 100%;
+        margin: -4px 0;
         text-align: center;
         color: $codeniche_grey;
     }
@@ -307,7 +309,7 @@ a {
         left: -40px
     }
     border-radius: 0;
-    background: lighten($reverse_bg_color, 4%);
+    background: lighten($reverse_bg_color, 6%);
     color: $reverse_font_color;
 }
 

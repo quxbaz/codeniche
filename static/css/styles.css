@@ -557,7 +557,8 @@ body {
 #footer {
   position: relative;
   width: inherit;
-  margin: 60px 0 0 -40px;
+  height: 130px;
+  margin: 80px 0 0 -40px;
   padding: 16px 40px;
   font-size: 12px;
   background: #111111;
@@ -592,7 +593,7 @@ body {
 #main {
   position: relative;
   width: 860px;
-  min-height: 100%;
+  /* min-height: 100%; */
   margin: 0 auto;
   padding: 40px 40px 0 40px;
   background: #ffffff; }
@@ -711,6 +712,7 @@ a {
 
 #work .sep {
   width: 100%;
+  margin: -4px 0;
   text-align: center;
   color: #aaaaaa; }
 
@@ -746,7 +748,7 @@ a {
   margin-bottom: 40px;
   margin-left: -40px;
   border-radius: 0;
-  background: #252525;
+  background: #2a2a2a;
   color: #e6e6e6; }
 
 #portfolio .block.pic {
