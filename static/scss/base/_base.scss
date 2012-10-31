@@ -442,7 +442,7 @@ ul.social-links, ul.page-links {
     .confirmation {
         display: none;
         padding: 4px 12px;
-        background: $codeniche_brightblue;
+        background: lighten($codeniche_brightblue, 18%);
         color: #ffffff;
     }
 }
