@@ -8,20 +8,28 @@
     <div class="column-extended">
       <div class="block contact-form">
         <div class="field-block">
-          <label for="field-first-name"><i class="icon-caret-right"></i> First name</label>
+          <label for="field-first-name"><i class="icon-caret-right"></i> First name <span class="required"> (required)</span></label>
           <input id="field-first-name" type="text" />
         </div>
         <div class="field-block">
-          <label for="field-last-name"><i class="icon-caret-right"></i> Last name</label>
+          <label for="field-last-name"><i class="icon-caret-right"></i> Last name <span class="required"> (required)</span></label>
           <input id="field-last-name" type="text" />
         </div>
         <div class="field-block">
-          <label for="field-email"><i class="icon-caret-right"></i> Email</label>
+          <label for="field-email"><i class="icon-caret-right"></i> Email <span class="required"> (required)</span></label>
           <input id="field-email" type="text" />
         </div>
         <div class="field-block">
-          <label for="field-project-info"><i class="icon-caret-right"></i> Tell us about your project</label>
-          <textarea id="field-project-info" type="text" rows="14"></textarea>
+          <label for="field-message"><i class="icon-caret-right"></i> Tell us about your project <span class="required"> (required)</span></label>
+          <textarea id="field-message" type="text" rows="14"></textarea>
+        </div>
+        <div class="field-block">
+          <input id="submit-contact-message" class="submit" type="button" value="Send" />
+          <img class="loader" src="/static/imgs/misc/loader.gif" />
+        </div>
+        <div class="field-block">
+          <div class="confirmation">Message sent - we'll be in
+          touch shortly.</div>
         </div>
       </div>
     </div> <!-- .column-extended -->

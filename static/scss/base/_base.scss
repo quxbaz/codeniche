@@ -43,6 +43,7 @@ $reverse_font_color: #e6e6e6;
 $reverse_blended_font_color: #b2b2b2;
 $reverse_bg_color: #1b1b1b;
 $codeniche_orange: #ff6b44;
+$codeniche_active_orange: darken($codeniche_orange, 10%);
 $codeniche_blue: #22aacc;
 $codeniche_brightblue: lighten($codeniche_blue, 5.5%);
 $codeniche_darkblue: darken($codeniche_blue, 10%);
@@ -399,6 +400,16 @@ ul.social-links, ul.page-links {
 }
 
 .contact-form {
+    .field-block {
+        position: relative;
+        &.disabled {
+            input, textarea {
+                pointer: default;
+                background: lighten($codeniche_lightgrey, 8%);
+                color: $codeniche_grey;
+            }
+        }
+    }
     .field-block + .field-block {margin-top: 14px;}
     label {
         display: block;
@@ -406,7 +417,7 @@ ul.social-links, ul.page-links {
         color: lighten($font_color, 12%);
         i {color: darken($codeniche_lightgrey, 6%);}
     }
-    input {
+    input[type="text"] {
         width: $block2_width - 12px;
         @extend .field;
     }
@@ -417,6 +428,38 @@ ul.social-links, ul.page-links {
         margin-bottom: 2px;
         border: 1px solid darken($codeniche_lightgrey, 4.2%);
         resize: none;
+    }
+    .required {
+        display: none;
+        float: right;
+        font-size: $sub3_fs;
+        color: #ff2020;
+    }
+    .loader {
+        display: none;
+        vertical-align: middle;
+    }
+    .confirmation {
+        display: none;
+        padding: 4px 12px;
+        background: $codeniche_brightblue;
+        color: #ffffff;
+    }
+}
+
+input[type="submit"], input[type="button"], .submit {
+    position: relative;
+    min-width: 80px;
+    padding: 10px 12px;
+    background: $codeniche_orange;
+    color: #ffffff;
+    border: none;
+    @include transition(background 300ms linear);
+    &:active {background: $codeniche_active_orange;}
+    &.disabled {
+        cursor: default;
+        background: $codeniche_grey;
+        color: lighten($codeniche_lightgrey, 12%);
     }
 }
 
