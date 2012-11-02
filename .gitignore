@@ -28,3 +28,6 @@ pip-log.txt
 
 # emacs save files
 *.lock
+
+# dev conf files
+conf/conf_dev.py
