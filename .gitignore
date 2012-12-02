@@ -31,3 +31,6 @@ pip-log.txt
 
 # dev conf files
 conf/conf_dev.py
+
+# server wsgi files
+app.wsgi
