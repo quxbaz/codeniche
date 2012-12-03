@@ -306,6 +306,10 @@ a {
     }
 }
 
+#home .sub-info .block {
+    min-height: 380px;
+}
+
 .banner {
     width: $page_width;
     padding: {left: 40px; right: 40px}
@@ -461,6 +465,16 @@ input[type="submit"], input[type="button"], .submit {
         background: $codeniche_grey;
         color: lighten($codeniche_lightgrey, 12%);
     }
+}
+
+.quotes p {
+    margin: 0 0 $line_height/2 0;
+}
+
+.quote-sayer {
+    display: block;
+    font-weight: bold;
+    color: lighten($font_color, 8%);
 }
 
 

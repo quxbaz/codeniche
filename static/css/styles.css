@@ -744,6 +744,9 @@ a {
     -ms-transition: color 400ms ease-out;
     transition: color 400ms ease-out; }
 
+#home .sub-info .block {
+  min-height: 380px; }
+
 .banner {
   width: 860px;
   padding-left: 40px;
@@ -890,6 +893,14 @@ input[type="submit"], input[type="button"], .submit {
     cursor: default;
     background: #aaaaaa;
     color: white; }
+
+.quotes p {
+  margin: 0 0 0.95em 0; }
+
+.quote-sayer {
+  display: block;
+  font-weight: bold;
+  color: #4a575e; }
 
 .image {
   display: inline-block;
